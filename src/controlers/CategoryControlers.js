@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import axios from "axios"
-// import AllItems from "./AllItems"
+import Style from "./CategoryControlers.module.css"
 import { NavLink } from "react-router-dom";
 export default function CategoryControlers() {
     const [arr, setArr] = useState([])
@@ -9,20 +9,26 @@ export default function CategoryControlers() {
             .then((res) => setArr(res.data))
     }, [])
 
-   if(arr){
-       return <div className="allcat">{ arr.map(v => {
-           return <div className="cat" key={v}>
-                <nav  className="nav">
+    if (arr) {
+        return <div className={Style.CategorisName}>
+            <h2 className={Style.name}>categoris</h2>
+            <div className={Style.sBox}> {arr.map(v => {
+                if (!v.isActive) return
+                return <div key={v}>
                     <NavLink
                         to={`/category/${v.category}`}>
-                        {v.category}
+                        <div className={Style.Name}>
+                            <span className={Style.span}>  {v.category}</span>
+                        </div>
                     </NavLink>
-                        {/* <Routes>
+                    {/* <Routes>
                             <Route path={`${v}`} element={<AllItems name={v} />} />
                         </Routes> */}
-                </nav> </div>})}
                 </div>
-                
-        }
+            })}
+            </div>
+        </div>
 
     }
+
+}

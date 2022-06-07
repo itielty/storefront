@@ -19,10 +19,13 @@ export default function ItemControler(props) {
                 console.log(res);
 
                 if (res != -1) {
-                        props.cart[res].amount++//
+                        props.cart[res].amount++
+                        props.useCart([...props.cart,])
+                      
                 }
                 else {
                         addToCart(id)
+                        
                 }
         }
         

@@ -1,0 +1,17 @@
+.HeaderDiv {
+    position: relative;
+    top: 0;
+    background-color: azure;
+    padding: 10px;
+    box-shadow: 3px 3px 10px 12px rgba(0,0,0,0.37);
+    margin-bottom: 20px;
+    width: 100%;
+    z-index: 5;
+    
+}
+
+.title {
+ 
+    margin: 0;
+    font-size: 35px;
+}

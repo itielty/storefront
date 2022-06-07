@@ -1,14 +1,8 @@
-import { NavLink } from "react-router-dom";
-
+import Style from "./Heders.module.css"
 export default function HeaderControler(){
-    return <header>
-        itiel!
-        <nav>
-            <NavLink
-            to="/">
-             Home   
-            </NavLink>
-
-        </nav>
-    </header>
+    return <>
+<div className = {Style.HeaderDiv}>
+    <h1 className={Style.title}>Itiel Store</h1>
+    </div>
+    </>
 }

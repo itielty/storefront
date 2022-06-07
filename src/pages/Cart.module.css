@@ -1,0 +1,9 @@
+.Cart{
+width: 270px;
+min-height: 500px;
+border: 1px solid;
+text-align: center;
+margin-left: 10px;
+display: inline-block;
+
+}

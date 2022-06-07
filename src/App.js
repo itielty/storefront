@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import React from 'react'
 import './App.css';
 import Category from './pages/Category';
-import Header from './pages/Header';
+import Headers from './pages/Headers';
 import AllItems from './pages/AllItems';
 import Item from "./pages/Item"
 import Cart from './pages/cart';
@@ -12,7 +12,9 @@ function App() {
   
   return <div >
     <Router>
-      <Header />
+    <header>
+<Headers/>
+</header>
       <div className='home'>
       <Cart cart={cart}/>
       <Routes>
